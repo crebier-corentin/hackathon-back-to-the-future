@@ -1,13 +1,3 @@
-.column {
-  position: fixed;
-  left: 0;
-  background-color: #fffcfd;
-  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png');
-  box-shadow: 0px 5px 10px rgba(34, 34, 34, 0.582);
-  height: 100%;
-  width: 120px;
-  transform: rotate(-2deg);
-}
 .columnRight {
   position: fixed;
   right: 0;
@@ -22,7 +12,7 @@
   -o-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.column .groove {
+.columnRight .groove {
   position: absolute;
   height: 180%;
   top: 60px;
@@ -30,34 +20,38 @@
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png');
   border-radius: 100px;
   box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.37) inset;
+  transform: rotate(-2deg);
+  -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -o-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.column .groove:first-child {
+.columnRight .groove:first-child {
   right: 2px;
   width: 8px;
 }
 
-.column .groove:nth-child(2) {
+.columnRight .groove:nth-child(2) {
   right: 14px;
   width: 12px;
 }
 
-.column .groove:nth-child(3) {
+.columnRight .groove:nth-child(3) {
   right: 33px;
   width: 16px;
 }
 
-.column .groove:nth-child(4) {
+.columnRight .groove:nth-child(4) {
   right: 60px;
   width: 25px;
 }
 
-.column .groove:nth-child(5) {
+.columnRight .groove:nth-child(5) {
   right: 100px;
   width: 40px;
 }
 
-.column .head {
+.columnRight .head {
   position: absolute;
   height: 60px;
   width: 80px;
@@ -69,7 +63,7 @@
   transform: rotate(2deg);
 }
 
-.column .head2 {
+.columnRight .head2 {
   position: absolute;
   height: 60px;
   width: 80px;

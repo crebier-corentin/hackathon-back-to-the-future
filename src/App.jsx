@@ -5,12 +5,14 @@ import Search from './pages/Search';
 import Artist from './pages/Artist';
 import Order from './pages/Order';
 import Column from './components/Column';
+import ColumnRight from './components/ColumnRight';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <Column />
+      <ColumnRight />
       <div className="wallWithShadow">Hello</div>
       <Switch>
         <Route exact path="/" component={Home} />
