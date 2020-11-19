@@ -13,7 +13,6 @@ function App() {
     <BrowserRouter>
       <Column />
       <ColumnRight />
-      <div className="wallWithShadow">Hello</div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/search" component={Search} />

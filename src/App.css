@@ -8,15 +8,11 @@
 body {
   background-color: #fffcfd;
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png');
+  font-family: 'PT Serif';
 }
 
 .App {
   text-align: center;
-}
-
-code {
-  background: #eee;
-  color: #d04;
 }
 
 h1 {
