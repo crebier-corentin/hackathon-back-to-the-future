@@ -33,6 +33,7 @@ h1 {
 
 p {
   font-family: 'PT Serif';
+  z-index: 80;
 }
 
 h1::first-letter {
