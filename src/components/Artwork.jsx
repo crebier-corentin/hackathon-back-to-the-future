@@ -10,32 +10,17 @@ function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
   return { width: srcWidth * ratio, height: srcHeight * ratio };
 }
 
-function Artwork({ id }) {
-  const [artwork, setArtwork] = useState(null);
-
-  useEffect(() => {
-    async function fetchArtwork() {
-      const res = await axios.get(
-        `https://openaccess-api.clevelandart.org/api/artworks/${id}`,
-      );
-
-      setArtwork(res.data.data);
-    }
-    fetchArtwork();
-  }, [id]);
-
+function Artwork({ artwork }) {
   const { width, height } = useMemo(
     () =>
       calculateAspectRatioFit(
-        artwork?.images?.web.width,
-        artwork?.images?.web.height,
+        Number(artwork?.images?.web.width ?? 0),
+        Number(artwork?.images?.web.height ?? 0),
         1024,
         512,
       ),
     [artwork],
   );
-
-  if (artwork == null) return <Loader />;
 
   if (artwork?.images == null) return '';
 
@@ -56,7 +41,39 @@ function Artwork({ id }) {
   );
 }
 Artwork.propTypes = {
+  artwork: PropTypes.shape({
+    title: PropTypes.string,
+    creation_date: PropTypes.string,
+    images: PropTypes.shape({
+      web: PropTypes.shape({
+        width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        url: PropTypes.string,
+      }),
+    }),
+  }).isRequired,
+};
+
+function FetchingArtwork({ id }) {
+  const [artwork, setArtwork] = useState(null);
+
+  useEffect(() => {
+    async function fetchArtwork() {
+      const res = await axios.get(
+        `https://openaccess-api.clevelandart.org/api/artworks/${id}`,
+      );
+
+      setArtwork(res.data.data);
+    }
+    fetchArtwork();
+  }, [id]);
+
+  if (artwork == null) return <Loader />;
+
+  return <Artwork artwork={artwork} />;
+}
+FetchingArtwork.propTypes = {
   id: PropTypes.number.isRequired,
 };
 
-export default Artwork;
+export { Artwork, FetchingArtwork };
