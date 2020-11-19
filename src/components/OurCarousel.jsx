@@ -15,6 +15,8 @@ const OurCarousel = () => {
               src="https://www.panoramadelart.com/sites/default/files/styles/moyen/public/joconde_1.jpg?itok=saTWX3MF"
               alt="Mona Lisa"
             />
+          </Link>
+          <Link to="/artist/Leonardo da Vinci">
             <p className="legend">Mona Lisa</p>
           </Link>
         </div>

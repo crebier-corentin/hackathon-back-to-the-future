@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.carousel .slide a {
+  display: block;
+  height: 100%;
+}
+
 .carousel .slide .legend {
   background-color: #fcfcff !important;
   background-image: url('https://www.transparenttextures.com/patterns/concrete-wall-2.png') !important;
