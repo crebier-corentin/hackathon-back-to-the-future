@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 
 class Home extends Component {
   constructor(props) {
@@ -12,7 +13,11 @@ class Home extends Component {
   render() {
     const { name } = this.state;
 
-    return <h1>{name}</h1>;
+    return (
+      <div>
+        <Header />
+      </div>
+    );
   }
 }
 
