@@ -46,7 +46,7 @@ function Artist() {
       </Link>
 
       <section className="artist-art">
-        <h2>Their work</h2>
+        <h2>{artist.name}’s work of art:</h2>
 
         <ul className="artist-art-list">
           {artist.artworks.slice(0, 10).map((artwork) => (

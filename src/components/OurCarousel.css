@@ -18,3 +18,7 @@
   opacity: 1;
   border-radius: 0;
 }
+
+.carousel-status {
+  display: none;
+}

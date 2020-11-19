@@ -24,6 +24,7 @@ h1 {
   text-shadow: 0px 2px 5px #f9c800;
   font-family: 'PT Serif';
   margin-bottom: 0;
+  z-index: 80;
 }
 
 .wallWithShadow {
