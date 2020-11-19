@@ -93,9 +93,9 @@
     column-gap: 2em;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1400px) {
   .artist article {
-    width: 90%;
+    width: 80%;
     margin-bottom: 2em;
     column-count: 4;
     column-gap: 2em;
