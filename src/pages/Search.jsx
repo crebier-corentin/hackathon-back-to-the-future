@@ -16,6 +16,7 @@ function Search() {
   const [artworks, setArtworks] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [nationality, setNationality] = useState(null);
+  const [type, setType] = useState(null);
 
   useEffect(() => {
     async function searchArtworks() {
@@ -31,6 +32,10 @@ function Search() {
 
         if (nationality != null) {
           params.artists = nationality;
+        }
+
+        if (type != null) {
+          params.type = type;
         }
 
         const res = await axios.get(
@@ -61,7 +66,7 @@ function Search() {
       }
     }
     searchArtworks();
-  }, [nationality]);
+  }, [nationality, type]);
 
   return (
     <main className="search">
@@ -78,6 +83,7 @@ function Search() {
           'Flemish',
         ].map((nationality_) => (
           <button
+            key={nationality_}
             type="button"
             className={`search-toggle-button
              ${nationality_ === nationality ? 'active' : ''}
@@ -89,6 +95,30 @@ function Search() {
             }}
           >
             {nationality_}
+          </button>
+        ))}
+      </section>
+
+      <section>
+        {[
+          'Drawing',
+          'Painting',
+          'Ceramic',
+          'Furniture and woodwork',
+          'Sculpture',
+          'Jewelry',
+        ].map((type_) => (
+          <button
+            key={type_}
+            type="button"
+            className={`search-toggle-button
+             ${type_ === type ? 'active' : ''}
+            `}
+            onClick={() => {
+              setType(type_ === type ? null : type_);
+            }}
+          >
+            {type_}
           </button>
         ))}
       </section>
