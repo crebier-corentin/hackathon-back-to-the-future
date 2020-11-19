@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../components/Loader';
-import Artwork from '../components/Artwork';
+import { FetchingArtwork } from '../components/Artwork';
 import './Artist.css';
 
 function Artist() {
@@ -51,7 +51,7 @@ function Artist() {
         <ul className="artist-art-list">
           {artist.artworks.slice(0, 10).map((artwork) => (
             <li className="artist-art-list-item" key={artwork.id}>
-              <Artwork id={artwork.id} />
+              <FetchingArtwork id={artwork.id} />
             </li>
           ))}
         </ul>
