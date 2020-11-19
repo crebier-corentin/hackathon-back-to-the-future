@@ -6,3 +6,8 @@ code {
   background: #eee;
   color: #d04;
 }
+
+h1 {
+  color: rgb(252, 248, 2);
+  text-shadow: 1px 1px 1px 1px white;
+}

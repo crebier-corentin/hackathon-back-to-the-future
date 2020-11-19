@@ -1,0 +1,21 @@
+.artwork {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 512px;
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.artwork-info {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+}
+
+.artwork-info h1,
+.artwork-info p {
+  margin: 0;
+}
