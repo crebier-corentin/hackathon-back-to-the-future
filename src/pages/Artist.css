@@ -6,6 +6,23 @@
   z-index: 80;
 }
 
+.artist p:first-child {
+  text-align: center;
+}
+
+.artist article {
+  text-align: justify;
+  width: 80%;
+  margin-bottom: 2em;
+  column-count: 1;
+}
+
+.artist article::first-letter {
+  font-family: 'Old London';
+  line-height: 80%;
+  font-size: 4em;
+}
+
 .artist-order-button {
   z-index: 80;
   color: inherit;
@@ -66,4 +83,21 @@
 .artist-art-list-item {
   margin: 0.5rem;
   overflow: auto;
+}
+
+@media only screen and (min-width: 720px) {
+  .artist article {
+    width: 90%;
+    margin-bottom: 2em;
+    column-count: 2;
+    column-gap: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .artist article {
+    width: 90%;
+    margin-bottom: 2em;
+    column-count: 4;
+    column-gap: 2em;
+  }
 }

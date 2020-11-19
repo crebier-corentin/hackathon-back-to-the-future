@@ -32,14 +32,13 @@ function Artist() {
     <main className="artist">
       <h1>{artist.name}</h1>
       <p>
-        <span>{artist.nationality}</span>{' '}
-        <span>
-          {artist.birth_year}-{artist.death_year}
-        </span>
+        {artist.nationality}
+        <br />
+        {artist.birth_year}-{artist.death_year}
       </p>
 
       {/* eslint-disable-next-line react/no-danger */}
-      <p dangerouslySetInnerHTML={{ __html: artist.biography }} />
+      <article dangerouslySetInnerHTML={{ __html: artist.biography }} />
 
       <Link className="artist-order-button" to={`/order/${artist.name}`}>
         I want to Order
