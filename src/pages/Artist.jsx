@@ -1,19 +1,31 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-class Artist extends Component {
-  constructor(props) {
-    super(props);
+function Artist() {
+  const [artist, setArtist] = useState(null);
+  const { name } = useParams();
 
-    this.state = {
-      name: 'Artist',
-    };
-  }
+  useEffect(() => {
+    async function fetchArtistInfo() {
+      const res = await axios.get(
+        'https://openaccess-api.clevelandart.org/api/creators/',
+        {
+          params: {
+            name,
+            limit: 1,
+          },
+        },
+      );
 
-  render() {
-    const { name } = this.state;
+      setArtist(res.data.data[0]);
+    }
+    fetchArtistInfo();
+  }, []);
 
-    return <h1>{name}</h1>;
-  }
+  if (artist == null) return 'Loading...';
+
+  return <h1>{artist.name}</h1>;
 }
 
 export default Artist;
