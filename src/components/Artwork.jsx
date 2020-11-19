@@ -46,8 +46,8 @@ Artwork.propTypes = {
     creation_date: PropTypes.string,
     images: PropTypes.shape({
       web: PropTypes.shape({
-        width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
-        height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+        width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         url: PropTypes.string,
       }),
     }),
