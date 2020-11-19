@@ -29,21 +29,25 @@
 .columnRight .groove:first-child {
   right: 2px;
   width: 8px;
+  top: 47px;
 }
 
 .columnRight .groove:nth-child(2) {
   right: 14px;
   width: 12px;
+  top: 53px;
 }
 
 .columnRight .groove:nth-child(3) {
   right: 33px;
   width: 16px;
+  top: 58px;
 }
 
 .columnRight .groove:nth-child(4) {
   right: 60px;
   width: 25px;
+  top: 62px;
 }
 
 .columnRight .groove:nth-child(5) {
