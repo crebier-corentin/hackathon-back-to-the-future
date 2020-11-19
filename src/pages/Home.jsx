@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import OurCarousel from '../components/OurCarousel';
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: 'Home',
-    };
+    this.state = {};
   }
 
   render() {
-    const { name } = this.state;
-
-    return <h1>{name}</h1>;
+    return (
+      <div>
+        <Header />
+        <OurCarousel />
+        <Footer />
+      </div>
+    );
   }
 }
 
