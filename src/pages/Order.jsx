@@ -84,49 +84,51 @@ function Order() {
             By chosing our king service, a complete Uber Arts team will bring
             the artist directly to your Higness. You will have the possibility
             to talk with the great {name}, allowing this master to have a better
-            feel of your royal desire. A wide selection of clothes and
+            understanding of your royal desire. A wide selection of clothes and
             accessories will also be brought to you by our team to suit your
             needs.
           </p>
         </div>
       </article>
-      <form onSubmit={handleSubmit} className="orderForm">
-        {king ? (
-          <label htmlFor="kingDesire">
-            Please tell us what are your desire your Highness
-            <textarea id="kingDesire" placeholder="Your royal desire">
-              aaa
-            </textarea>
+      <article className="orderFormContainer">
+        <form onSubmit={handleSubmit} className="orderForm">
+          {king ? (
+            <label htmlFor="kingDesire">
+              Please tell us what are your desire your Highness
+              <textarea id="kingDesire" placeholder="Your royal desire">
+                aaa
+              </textarea>
+            </label>
+          ) : (
+            <label htmlFor="lordSubject">
+              Show the artist what you want my lord
+              <input id="lordSubject" type="file" />
+            </label>
+          )}
+          <label htmlFor="setDate">
+            In which year do you want to receive your masterpiece my lord ?
+            <input
+              id="setDate"
+              type="number"
+              placeholder="Enter a year"
+              value={currentDate}
+              onChange={handleCurrentDate}
+            />
           </label>
-        ) : (
-          <label htmlFor="lordSubject">
-            Show the artist what you want my lord
-            <input id="lordSubject" type="file" />
-          </label>
-        )}
-        <label htmlFor="setDate">
-          In which year do you want to receive your masterpiece my lord ?
-          <input
-            id="setDate"
-            type="number"
-            placeholder="Enter a year"
-            value={currentDate}
-            onChange={handleCurrentDate}
-          />
-        </label>
-        {currentDate === 0 ? (
-          <p className="waitingPrice">
-            Waiting for a date to give you the price of your masterpiece my
-            lord.
-          </p>
-        ) : (
-          <p className="havingPrice">
-            Your masterpiece will cost you
-            <span className="price"> {price}kg of gold</span> my lord.
-          </p>
-        )}
-        <button type="submit">Request your masterpiece</button>
-      </form>
+          {currentDate === 0 ? (
+            <p className="waitingPrice">
+              Waiting for a date to give you the price of your masterpiece my
+              lord.
+            </p>
+          ) : (
+            <p className="havingPrice">
+              Your masterpiece will cost you
+              <span className="price"> {price}kg of gold</span> my lord.
+            </p>
+          )}
+          <button type="submit">Request your masterpiece</button>
+        </form>
+      </article>
       <Modal open={open} />
     </section>
   );
