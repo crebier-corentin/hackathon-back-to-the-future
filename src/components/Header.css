@@ -5,3 +5,7 @@
   z-index: 80;
   position: relative;
 }
+
+.HeaderLink {
+  text-decoration: none;
+}
