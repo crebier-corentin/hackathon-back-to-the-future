@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import OurCarousel from '../components/OurCarousel';
+// import ClickableLink from '../components/ClickableLink';
 
 class Home extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Home extends Component {
       <div>
         <Header />
         <OurCarousel />
+        {/* <ClickableLink /> */}
         <Footer />
       </div>
     );
