@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Artist from './pages/Artist';
@@ -8,9 +8,28 @@ import Column from './components/Column';
 import ColumnRight from './components/ColumnRight';
 import './App.css';
 
+/**
+ * Scroll to top of page on route change
+ */
+function ScrollToTop() {
+  const history = useHistory();
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    };
+  }, []);
+
+  return null;
+}
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
+      <ScrollToTop />
+
       <Column />
       <ColumnRight />
       <div className="wallWithShadow">Hello</div>
