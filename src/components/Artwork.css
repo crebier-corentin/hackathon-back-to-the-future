@@ -3,11 +3,12 @@
   flex-direction: column;
   justify-content: flex-end;
 
-  height: 512px;
-
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  max-height: 512px;
+  max-width: 1024px;
 }
 
 .artwork-info {
@@ -15,7 +16,7 @@
   padding: 0.5rem;
 }
 
-.artwork-info h1,
+.artwork-info h2,
 .artwork-info p {
   margin: 0;
 }
