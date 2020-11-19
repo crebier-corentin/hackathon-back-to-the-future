@@ -14,8 +14,8 @@ function Artwork({ artwork }) {
   const { width, height } = useMemo(
     () =>
       calculateAspectRatioFit(
-        artwork?.images?.web.width,
-        artwork?.images?.web.height,
+        Number(artwork?.images?.web.width ?? 0),
+        Number(artwork?.images?.web.height ?? 0),
         1024,
         512,
       ),
@@ -46,8 +46,8 @@ Artwork.propTypes = {
     creation_date: PropTypes.string,
     images: PropTypes.shape({
       web: PropTypes.shape({
-        width: PropTypes.number,
-        height: PropTypes.number,
+        width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+        height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
         url: PropTypes.string,
       }),
     }),
