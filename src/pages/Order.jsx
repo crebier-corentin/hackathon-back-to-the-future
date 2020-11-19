@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+// import ReactModal from 'react-modal';
+import Modal from '../components/Modal';
 import '../App.css';
 import './order.css';
 
@@ -12,6 +14,15 @@ function Order() {
   const { name } = useParams();
   const handleSubmit = (e) => {
     e.preventDefault();
+    <Modal isOpen={king} />;
+    //   alert(`Thank you for your order my lord, it will be conveyed to you shortly. ${<Link className="order-home-button" to="/">
+    //   Go back to home back
+    // </Link>}`);
+    // return(
+    //   <ReactModal isOpen onAfterOpen={}>
+    //     Testing
+    //   </ReactModal>
+    // )
   };
   const handleCurrentDate = (e) => {
     setCurrentDate(Number(e.target.value));
