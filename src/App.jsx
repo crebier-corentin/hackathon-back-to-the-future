@@ -4,11 +4,14 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Artist from './pages/Artist';
 import Order from './pages/Order';
+import Column from './components/Column';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <Column />
+      <div className="wallWithShadow">Hello</div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/search" component={Search} />
