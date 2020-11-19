@@ -1,0 +1,47 @@
+.artist,
+.artist-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-order-button {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 0.2rem black;
+
+  transition: box-shadow 0.25s ease;
+}
+
+.artist-order-button:hover {
+  box-shadow: 0 0 0.3rem black;
+}
+
+.artist-order-button:active {
+  box-shadow: inset 0 0 0.3rem black;
+}
+
+.artist-art {
+  max-width: 100vw;
+}
+
+.artist-art-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  padding: 0;
+
+  /* max artwork width + art list item margin */
+  max-width: min(calc(1024px + 0.5rem * 2), 100%);
+}
+
+.artist-art-list-item {
+  margin: 0.5rem;
+  overflow: auto;
+}
