@@ -28,6 +28,7 @@ h2 {
   margin: 1rem;
   padding: 1rem;
   width: 40%;
+  min-width: 18rem;
   border-radius: 15%;
 }
 .orderLord:hover {
@@ -56,6 +57,14 @@ h2 {
   border: 0.2rem solid #f9c800;
   background-color: #f9c70059;
 }
+.orderLord h4,
+.orderKing h4 {
+  text-align: center;
+}
+.orderLord p,
+.orderKing p {
+  text-align: justify;
+}
 .orderForm {
   margin: 0 auto;
   display: flex;
@@ -82,12 +91,26 @@ label {
 .price {
   color: #cc8100;
 }
+
+.modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.modal p {
+  font-size: 1.2rem;
+}
 .order-home-button {
   color: inherit;
   text-decoration: none;
+  font-size: 1.4rem;
   font-weight: bold;
-
+  width: 24rem;
   padding: 0.5rem 1rem;
+  margin-top: 1rem;
   box-shadow: 0 0 0.2rem black;
 
   transition: box-shadow 0.25s ease;
