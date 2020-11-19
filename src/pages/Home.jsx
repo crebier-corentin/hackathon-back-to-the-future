@@ -5,14 +5,10 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: 'Home',
-    };
+    this.state = {};
   }
 
   render() {
-    const { name } = this.state;
-
     return (
       <div>
         <Header />
