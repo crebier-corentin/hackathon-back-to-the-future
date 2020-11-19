@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Old London';
+  src: url('./font/OldLondon.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
 }
@@ -8,6 +13,14 @@ code {
 }
 
 h1 {
-  color: rgb(252, 248, 2);
-  text-shadow: 1px 1px 1px 1px white;
+  text-align: center;
+  font-size: 4em;
+  color: transparent;
+  background-color: #cc8100;
+  background-clip: text;
+  text-shadow: 0px 2px 5px #f9c800;
+}
+
+h1::first-letter {
+  font-family: 'Old London';
 }
