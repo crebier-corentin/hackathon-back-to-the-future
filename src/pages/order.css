@@ -1,0 +1,84 @@
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: transparent;
+  background-color: #cc8100;
+  background-clip: text;
+  text-shadow: 0px 2px 5px #f9c800;
+  font-family: 'PT Serif';
+}
+.orderContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 65vw;
+}
+.nobleContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 50vh;
+}
+.orderLord,
+.orderKing {
+  margin: 1rem;
+  padding: 1rem;
+  width: 40%;
+  border-radius: 15%;
+}
+.orderLord:hover {
+  background-color: #1a100059;
+  color: #cc8100;
+  cursor: pointer;
+}
+.orderKing:hover {
+  background-color: #3d310059;
+  color: #f9c800;
+  cursor: pointer;
+}
+.orderLord:focus {
+  background-color: #1a100059;
+  color: #cc8100;
+}
+.orderKing:focus {
+  background-color: #3d310059;
+  color: #f9c800;
+}
+.orderLord {
+  border: 0.2rem solid #cc8100;
+  background-color: #cc810059;
+}
+.orderKing {
+  border: 0.2rem solid #f9c800;
+  background-color: #f9c70059;
+}
+.orderForm {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+label {
+  margin: 0.5rem 0;
+}
+#lordSubject {
+  margin: 0 0.5rem;
+}
+#setDate {
+  margin: 0 0.5rem;
+  width: 5rem;
+}
+
+.havingPrice {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.price {
+  color: #cc8100;
+}
