@@ -10,9 +10,9 @@ h2 {
 .orderContainer {
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
   width: 65vw;
 }
 .nobleContainer {
@@ -64,6 +64,11 @@ h2 {
 .orderLord p,
 .orderKing p {
   text-align: justify;
+}
+.orderFormContainer {
+  display: block;
+  margin: 3rem 0;
+  width: 100%;
 }
 .orderForm {
   margin: 0 auto;
