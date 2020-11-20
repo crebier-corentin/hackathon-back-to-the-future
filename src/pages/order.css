@@ -78,13 +78,6 @@ h2 {
   align-items: center;
   width: 100%;
 }
-/* .kingLabel {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 #kingDesire,
 #setDate {
   margin-top: 0.5rem;
