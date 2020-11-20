@@ -17,6 +17,19 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 7em;
+  color: transparent;
+  background-color: #cc8100;
+  background-clip: text;
+  text-shadow: 0px 2px 5px #f9c800;
+  font-family: 'PT Serif';
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: 80;
+}
+
+h2 {
+  text-align: center;
   font-size: 4em;
   color: transparent;
   background-color: #cc8100;
@@ -42,4 +55,13 @@ h1::first-letter {
   font-size: 2em;
   color: #000;
   background-color: none;
+}
+
+.separateFromHeader {
+  height: 2px;
+  width: 40%;
+  border-radius: 100%;
+  filter: blur(2px);
+  background-color: rgba(12, 12, 12, 0.281);
+  box-shadow: -20px7px 8px rgba(34, 34, 34, 0.226);
 }
