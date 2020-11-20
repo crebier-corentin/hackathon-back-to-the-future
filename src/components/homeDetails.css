@@ -1,0 +1,29 @@
+.homeDetailsContainer {
+  width: 65vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem auto;
+}
+.homeDetailsContainer p {
+  text-align: justify;
+}
+.detailsServices {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.innerDetails {
+  width: 40%;
+  min-width: 18rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.innerDetails p {
+  text-align: justify;
+}
