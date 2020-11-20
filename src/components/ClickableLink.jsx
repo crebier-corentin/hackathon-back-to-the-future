@@ -18,7 +18,7 @@ class ClickableLink extends Component {
   handleSubmit = (event) => {
     const { name } = this.state;
     const { history } = this.props;
-    history.push(`/artist/${name}`); // on change de page avec le param
+    history.push(`/search/${name}`); // on change de page avec le param
     this.setState({ name: '' }); // on vide la case du formulaire
     event.preventDefault();
   };

@@ -37,7 +37,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/search" component={Search} />
+        <Route path="/search/:query?" component={Search} />
         <Route path="/artist/:name" component={Artist} />
         <Route path="/order/:name" component={Order} />
       </Switch>

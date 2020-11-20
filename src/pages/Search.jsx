@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../components/Loader';
 import './Search.css';
@@ -21,12 +21,16 @@ function getArtistNameFromDesc(desc) {
 }
 
 function Search() {
+  const { query: queryDefault } = useParams();
+
   const [artworks, setArtworks] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(queryDefault ?? '');
   const [nationality, setNationality] = useState(null);
   const [type, setType] = useState(null);
+
+  const didMountRef = useRef(false);
 
   const searchArtworks = useCallback(async (query_, nationality_, type_) => {
     setLoading(true);
@@ -85,6 +89,12 @@ function Search() {
   }, [nationality, type]);
 
   useEffect(() => {
+    // Don't launch 2 requests on mount
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+
     debouncedSearchArtworks(query, nationality, type);
   }, [query]);
 
