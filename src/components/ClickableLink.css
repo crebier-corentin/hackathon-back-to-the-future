@@ -1,0 +1,55 @@
+.thumbs-wrapper.axis-vertical {
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 1%;
+  grid-template-areas:
+    'DesciptionSearchArtist DesciptionRandomButton'
+    'SearchArtist RandomButton';
+  text-align: center;
+  margin-bottom: 1%;
+  font-size: 1.5em;
+  margin-left: 5%;
+  margin-right: 5%;
+  place-items: center;
+  place-content: center;
+}
+
+.DesciptionSearchArtist {
+  grid-area: DesciptionSearchArtist;
+  max-width: 500px;
+}
+
+.DesciptionRandomButton {
+  grid-area: DesciptionRandomButton;
+}
+
+.SearchArtist {
+  grid-area: SearchArtist;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1px 4px;
+  width: 50%;
+  height: 70%;
+}
+
+.RandomButton {
+  grid-area: RandomButton;
+  font-size: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 70%;
+}
+
+.RandomButton:hover {
+  cursor: pointer;
+}
+
+.RandomButton:focus {
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}

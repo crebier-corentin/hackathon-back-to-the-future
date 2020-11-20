@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import OurCarousel from '../components/OurCarousel';
-// import ClickableLink from '../components/ClickableLink';
+import ClickableLink from '../components/ClickableLink';
 
 class Home extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <div>
         <OurCarousel />
-        {/* <ClickableLink /> */}
+        <ClickableLink />
       </div>
     );
   }
