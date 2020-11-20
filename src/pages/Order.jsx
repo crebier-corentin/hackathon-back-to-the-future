@@ -45,6 +45,7 @@ function Order() {
 
   return (
     <section className="orderContainer">
+      <div className="separateFromHeader" />
       <h2>Order a masterpiece from {name}</h2>
       <article className="nobleContainer">
         <div
