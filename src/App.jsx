@@ -7,6 +7,8 @@ import Order from './pages/Order';
 import Column from './components/Column';
 import ColumnRight from './components/ColumnRight';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 /**
  * Scroll to top of page on route change
@@ -32,12 +34,14 @@ function App() {
 
       <Column />
       <ColumnRight />
+      <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/search" component={Search} />
         <Route path="/artist/:name" component={Artist} />
         <Route path="/order/:name" component={Order} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
