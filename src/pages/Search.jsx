@@ -72,7 +72,7 @@ function Search() {
     <main className="search">
       <h1>Search</h1>
 
-      <section>
+      <section className="search-toggle-button-group">
         {[
           'French',
           'Italian',
@@ -99,7 +99,7 @@ function Search() {
         ))}
       </section>
 
-      <section>
+      <section className="search-toggle-button-group">
         {[
           'Drawing',
           'Painting',
