@@ -21,26 +21,6 @@ const OurCarousel = () => {
           </Link>
         </div>
         <div>
-          <Link to="/artist/Raphael">
-            <img
-              className="img-OurCarousel"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/1280px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg"
-              alt="The School of Athens"
-            />
-            <p className="legend">The School of Athens</p>
-          </Link>
-        </div>
-        <div>
-          <Link to="/artist/Michelangelo">
-            <img
-              className="img-OurCarousel"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1920px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg"
-              alt="The Creation of Adam"
-            />
-            <p className="legend">The Creation of Adam</p>
-          </Link>
-        </div>
-        <div>
           <Link to="/artist/Johannes Vermeer">
             <img
               className="img-OurCarousel"
@@ -121,16 +101,6 @@ const OurCarousel = () => {
           </Link>
         </div>
         <div>
-          <Link to="/artist/Sandro Botticelli">
-            <img
-              className="img-OurCarousel"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/1920px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg"
-              alt="The Birth of Venus"
-            />
-            <p className="legend">The Birth of Venus</p>
-          </Link>
-        </div>
-        <div>
           <Link to="/artist/Pierre-Auguste Renoir">
             <img
               className="img-OurCarousel"
@@ -158,16 +128,6 @@ const OurCarousel = () => {
               alt="The Scream"
             />
             <p className="legend">The Scream</p>
-          </Link>
-        </div>
-        <div>
-          <Link to="/artist/Eduard Manet">
-            <img
-              className="img-OurCarousel"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg/1280px-Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg"
-              alt="The Luncheon on the Glass"
-            />
-            <p className="legend">The Luncheon on the Glass</p>
           </Link>
         </div>
       </Carousel>

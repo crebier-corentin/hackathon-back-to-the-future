@@ -4,6 +4,8 @@ import axios from 'axios';
 import Loader from '../components/Loader';
 import { FetchingArtwork } from '../components/Artwork';
 import './Artist.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Artist() {
   const [artist, setArtist] = useState(null);
@@ -29,37 +31,43 @@ function Artist() {
   if (artist == null) return <Loader />;
 
   return (
-    <main className="artist">
-      <h1>{artist.name}</h1>
-      <p>
-        {artist.nationality}
-        <br />
-        {artist.birth_year}-{artist.death_year}
-      </p>
+    <div>
+      <div className="Header">
+        <Header />
+      </div>
+      <main className="artist">
+        <h1>{artist.name}</h1>
+        <p>
+          {artist.nationality}
+          <br />
+          {artist.birth_year}-{artist.death_year}
+        </p>
 
-      {/* eslint-disable-next-line react/no-danger */}
-      <article dangerouslySetInnerHTML={{ __html: artist.biography }} />
+        {/* eslint-disable-next-line react/no-danger */}
+        <article dangerouslySetInnerHTML={{ __html: artist.biography }} />
 
-      <Link className="artist-order-button" to={`/order/${artist.name}`}>
-        I want to Order
-      </Link>
+        <Link className="artist-order-button" to={`/order/${artist.name}`}>
+          I want to Order
+        </Link>
 
-      <section className="artist-art">
-        <h2>{artist.name}’s work of art:</h2>
+        <section className="artist-art">
+          <h2>{artist.name}’s work of art:</h2>
 
-        <ul className="artist-art-list">
-          {artist.artworks.slice(0, 10).map((artwork) => (
-            <li className="artist-art-list-item" key={artwork.id}>
-              <FetchingArtwork id={artwork.id} />
-            </li>
-          ))}
-        </ul>
-      </section>
+          <ul className="artist-art-list">
+            {artist.artworks.slice(0, 10).map((artwork) => (
+              <li className="artist-art-list-item" key={artwork.id}>
+                <FetchingArtwork id={artwork.id} />
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <Link className="artist-order-button" to={`/order/${artist.name}`}>
-        I want to Order
-      </Link>
-    </main>
+        <Link className="artist-order-button" to={`/order/${artist.name}`}>
+          I want to Order
+        </Link>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
