@@ -43,3 +43,12 @@ h1::first-letter {
   color: #000;
   background-color: none;
 }
+
+.separateFromHeader {
+  height: 2px;
+  width: 40%;
+  border-radius: 100%;
+  filter: blur(2px);
+  background-color: rgba(12, 12, 12, 0.281);
+  box-shadow: -20px7px 8px rgba(34, 34, 34, 0.226);
+}

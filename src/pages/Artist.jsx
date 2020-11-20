@@ -30,6 +30,7 @@ function Artist() {
 
   return (
     <main className="artist">
+      <div className="separateFromHeader" />
       <h1>{artist.name}</h1>
       <p>
         {artist.nationality}
