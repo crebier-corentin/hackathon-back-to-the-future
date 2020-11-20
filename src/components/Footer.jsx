@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <div className="Footer">
-      <h3>© Flo aux VVC</h3>
+      <p>© Flo aux VVC</p>
     </div>
   );
 };

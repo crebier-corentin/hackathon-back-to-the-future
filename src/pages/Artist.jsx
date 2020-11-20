@@ -30,7 +30,8 @@ function Artist() {
 
   return (
     <main className="artist">
-      <h1>{artist.name}</h1>
+      <div className="separateFromHeader" />
+      <h2>{artist.name}</h2>
       <p>
         {artist.nationality}
         <br />
@@ -45,7 +46,7 @@ function Artist() {
       </Link>
 
       <section className="artist-art">
-        <h2>{artist.name}’s work of art:</h2>
+        <h3>{artist.name}’s work of art:</h3>
 
         <ul className="artist-art-list">
           {artist.artworks.slice(0, 10).map((artwork) => (
