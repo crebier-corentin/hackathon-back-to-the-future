@@ -32,30 +32,30 @@ h3 {
   min-width: 18rem;
 }
 .orderLord:hover {
-  background-color: #1a100059;
-  color: #cc8100;
+  background-color: #1a1000aa;
+  color: #fff6e8;
   cursor: pointer;
 }
 .orderKing:hover {
-  background-color: #3d310059;
-  color: #f9c800;
+  background-color: #3d3100aa;
+  color: #fcd124;
   cursor: pointer;
 }
 .orderLord:focus {
-  background-color: #1a100059;
-  color: #cc8100;
+  background-color: #1a1000aa;
+  color: #fff6e8;
 }
 .orderKing:focus {
-  background-color: #3d310059;
-  color: #f9c800;
+  background-color: #3d3100aa;
+  color: #fcd124;
 }
 .orderLord {
-  border: 0.2rem solid #cc8100;
-  background-color: #cc810059;
+  background-color: #2015002c;
+  box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.384);
 }
 .orderKing {
-  border: 0.2rem solid #f9c800;
   background-color: #f9c70059;
+  box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.384);
 }
 .orderLord h4,
 .orderKing h4 {
@@ -78,13 +78,6 @@ h3 {
   align-items: center;
   width: 100%;
 }
-/* .kingLabel {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 #kingDesire,
 #setDate {
   margin-top: 0.5rem;
