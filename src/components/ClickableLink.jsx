@@ -8,7 +8,9 @@ const artists = ['Rembrandt', 'Claude Monet', 'Van Gogh', 'Renoir'];
 class ClickableLink extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: '',
+    };
   }
 
   handleChange = (event) => {
@@ -35,16 +37,14 @@ class ClickableLink extends Component {
     const { name } = this.state;
     return (
       <div className="grid-container">
-        <p className="DesciptionSearchArtist">
-          If you know the name of your favorite Artist, type it here:
-        </p>
+        <p className="DesciptionSearchArtist">Name of artists or keywords:</p>
         <div>
           <input
             type="text"
             value={name}
             onChange={this.handleChange}
             className="SearchArtist"
-            placeholder="Artist's name"
+            placeholder="Query"
           />
           <button type="submit" id="search-button" onClick={this.handleSubmit}>
             <img src="/magnifyingglass.svg" width="100%" alt="Search" />

@@ -159,6 +159,7 @@ function Search() {
           id="query-input"
           type="text"
           className="search-query-input"
+          autoComplete="off"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
