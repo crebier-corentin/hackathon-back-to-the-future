@@ -9,6 +9,8 @@
   -moz-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(-2deg);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(-2deg);
   -o-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(-2deg);
+
+  z-index: -1;
 }
 
 .columnRight .groove {
