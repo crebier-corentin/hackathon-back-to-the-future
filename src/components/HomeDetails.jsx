@@ -4,6 +4,7 @@ import './homeDetails.css';
 function HomeDetails() {
   return (
     <section className="homeDetailsContainer">
+      <div className="separateFromHeader" />
       <h3>Our services</h3>
       <p>
         If you&apos;re looking for original masterpieces, able to make other
