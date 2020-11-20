@@ -6,6 +6,7 @@ dependencies:
   prop-types: 15.7.2
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-modal: 3.11.2_react-dom@17.0.1+react@17.0.1
   react-refresh: 0.9.0
   react-responsive-carousel: 3.2.10
   react-router-dom: 5.2.0_react@17.0.1
@@ -4999,6 +5000,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
+  /exenv/1.2.2:
+    dev: false
+    resolution:
+      integrity: sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
   /exit/0.1.2:
     dev: false
     engines:
@@ -9615,6 +9620,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
+  /react-lifecycles-compat/3.0.4:
+    dev: false
+    resolution:
+      integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  /react-modal/3.11.2_react-dom@17.0.1+react@17.0.1:
+    dependencies:
+      exenv: 1.2.2
+      prop-types: 15.7.2
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      react-lifecycles-compat: 3.0.4
+      warning: 4.0.3
+    dev: false
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0 || ^16
+      react-dom: ^0.14.0 || ^15.0.0 || ^16
+    resolution:
+      integrity: sha512-o8gvvCOFaG1T7W6JUvsYjRjMVToLZgLIsi5kdhFIQCtHxDkA47LznX62j+l6YQkpXDbvQegsDyxe/+JJsFQN7w==
   /react-refresh/0.8.3:
     dev: false
     engines:
@@ -11723,6 +11746,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
+  /warning/4.0.3:
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+    resolution:
+      integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
   /watchpack-chokidar2/2.0.1:
     dependencies:
       chokidar: 2.1.8
@@ -12280,6 +12309,7 @@ specifiers:
   prop-types: ^15.7.2
   react: ^17.0.1
   react-dom: ^17.0.1
+  react-modal: ^3.11.2
   react-refresh: ^0.9.0
   react-responsive-carousel: ^3.2.10
   react-router-dom: ^5.2.0
