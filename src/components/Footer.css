@@ -4,4 +4,6 @@
   flex-direction: column;
   box-shadow: -5px -5px 10px rgba(34, 34, 34, 0.384);
   font-size: 0.7em;
+  position: relative;
+  z-index: -3;
 }
