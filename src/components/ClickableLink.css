@@ -32,8 +32,9 @@
   grid-area: SearchArtist;
   text-align: center;
   font-size: 1.5em;
-  padding: 1px 4px;
-  width: 50%;
+  padding: 17px 4px;
+  width: 70%;
+  min-width: 200px;
   height: 70%;
 }
 
@@ -42,6 +43,7 @@
   font-size: 1.5em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   width: 50%;
+  min-width: 200px;
   height: 70%;
 }
 
@@ -52,4 +54,10 @@
 .RandomButton:focus {
   outline: none;
   border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#search-button {
+  background: none;
+  border: none;
+  width: 60px;
+  cursor: pointer;
 }

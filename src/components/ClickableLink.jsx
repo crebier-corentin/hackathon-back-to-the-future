@@ -38,18 +38,18 @@ class ClickableLink extends Component {
         <p className="DesciptionSearchArtist">
           If you know the name of your favorite Artist, type it here:
         </p>
-        <input
-          type="text"
-          value={name}
-          onChange={this.handleChange}
-          className="SearchArtist"
-          placeholder="Artist's name"
-        />
-        <button type="submit" id="search-button" onClick={this.handleSubmit}>
-          <span role="img" aria-label="emoji" id="emoji">
-            🔍
-          </span>
-        </button>
+        <div>
+          <input
+            type="text"
+            value={name}
+            onChange={this.handleChange}
+            className="SearchArtist"
+            placeholder="Artist's name"
+          />
+          <button type="submit" id="search-button" onClick={this.handleSubmit}>
+            <img src="/magnifyingglass.svg" width="100%" alt="Search" />
+          </button>
+        </div>
         <p className="DesciptionRandomButton">
           Want to be surprised ? Click here !
         </p>
