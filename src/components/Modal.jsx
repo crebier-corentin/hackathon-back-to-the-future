@@ -11,18 +11,21 @@ const modalStyle = {
     right: 0,
     bottom: 0,
     backgroundColor: 'rgba(255, 255, 255, 0.75)',
+    zIndex: '140',
   },
   content: {
     margin: '20vh auto',
     height: '40vh',
+    width: '90vw',
     textAlign: 'center',
     border: '1px solid #ccc',
-    background: ' #f9c70040',
+    background: ' #f9c700bb',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
     borderRadius: '4px',
     outline: 'none',
     padding: '20px',
+    zIndex: '150',
   },
 };
 
