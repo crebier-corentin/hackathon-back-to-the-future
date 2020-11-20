@@ -9,3 +9,16 @@
 .HeaderLink {
   text-decoration: none;
 }
+
+.catchPhrase {
+  text-align: center;
+  font-size: 2em;
+  color: transparent;
+  background-color: #cc8100;
+  background-clip: text;
+  text-shadow: 0px 2px 5px #f9c800;
+  font-family: 'PT Serif';
+  margin-bottom: 2%;
+  margin-top: 0;
+  z-index: 80;
+}
