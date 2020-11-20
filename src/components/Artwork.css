@@ -16,7 +16,11 @@
   padding: 0.5rem;
 }
 
-.artwork-info h2,
+.artwork-info h3,
 .artwork-info p {
   margin: 0;
+  color: inherit;
+
+  /* max artwork width + art list item margin */
+  max-width: min(1024px, 100vw);
 }

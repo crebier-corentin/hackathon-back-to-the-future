@@ -34,7 +34,7 @@ function Artwork({ artwork }) {
       }}
     >
       <div className="artwork-info">
-        <h2>{artwork.title}</h2>
+        <h3>{artwork.title}</h3>
         <p>{artwork.creation_date}</p>
       </div>
     </article>

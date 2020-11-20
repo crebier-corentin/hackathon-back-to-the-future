@@ -1,9 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../components/Loader';
 import './Search.css';
 import { Artwork } from '../components/Artwork';
+
+function debounce(fn, wait = 1) {
+  let timeout;
+  return function debouncedFn(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn.call(this, ...args), wait);
+  };
+}
 
 const nameFromDescRegex = /(.*) \(/;
 function getArtistNameFromDesc(desc) {
@@ -15,64 +23,76 @@ function getArtistNameFromDesc(desc) {
 function Search() {
   const [artworks, setArtworks] = useState([]);
   const [isLoading, setLoading] = useState(false);
+
+  const [query, setQuery] = useState('');
   const [nationality, setNationality] = useState(null);
   const [type, setType] = useState(null);
 
-  useEffect(() => {
-    async function searchArtworks() {
-      setLoading(true);
-      try {
-        const params = {
-          cc0: true,
-          has_image: 1,
-          limit: 100,
-          created_after: 1492,
-          created_before: 1789,
-        };
+  const searchArtworks = useCallback(async (query_, nationality_, type_) => {
+    setLoading(true);
+    try {
+      const params = {
+        cc0: true,
+        has_image: 1,
+        limit: 100,
+        created_after: 1492,
+        created_before: 1789,
+      };
 
-        if (nationality != null) {
-          params.artists = nationality;
-        }
-
-        if (type != null) {
-          params.type = type;
-        }
-
-        const res = await axios.get(
-          'https://openaccess-api.clevelandart.org/api/artworks/',
-          {
-            params,
-          },
-        );
-
-        const filteredArtworks = [];
-        for (const artwork of res.data.data) {
-          if (artwork.creators[0]?.description == null) continue;
-
-          artwork.artistName = getArtistNameFromDesc(
-            artwork.creators[0].description,
-          );
-          if (artwork.artistName == null) continue;
-
-          artwork.images.web.width = Number(artwork.images.web.width);
-          artwork.images.web.height = Number(artwork.images.web.height);
-
-          filteredArtworks.push(artwork);
-        }
-
-        setArtworks(filteredArtworks);
-      } finally {
-        setLoading(false);
+      if (query_ !== '') {
+        params.q = query_;
       }
+
+      if (nationality_ != null) {
+        params.artists = nationality_;
+      }
+
+      if (type_ != null) {
+        params.type = type_;
+      }
+
+      const res = await axios.get(
+        'https://openaccess-api.clevelandart.org/api/artworks/',
+        {
+          params,
+        },
+      );
+
+      const filteredArtworks = [];
+      for (const artwork of res.data.data) {
+        if (artwork.creators[0]?.description == null) continue;
+
+        artwork.artistName = getArtistNameFromDesc(
+          artwork.creators[0].description,
+        );
+        if (artwork.artistName == null) continue;
+
+        filteredArtworks.push(artwork);
+      }
+
+      setArtworks(filteredArtworks);
+    } finally {
+      setLoading(false);
     }
-    searchArtworks();
+  }, []);
+  const debouncedSearchArtworks = useCallback(
+    debounce(searchArtworks, 1000),
+    [],
+  );
+
+  useEffect(() => {
+    searchArtworks(query, nationality, type);
   }, [nationality, type]);
+
+  useEffect(() => {
+    debouncedSearchArtworks(query, nationality, type);
+  }, [query]);
 
   return (
     <main className="search">
       <h1>Search</h1>
 
-      <section>
+      <section className="search-toggle-button-group">
         {[
           'French',
           'Italian',
@@ -99,7 +119,7 @@ function Search() {
         ))}
       </section>
 
-      <section>
+      <section className="search-toggle-button-group">
         {[
           'Drawing',
           'Painting',
@@ -122,6 +142,19 @@ function Search() {
           </button>
         ))}
       </section>
+
+      <label htmlFor="query-input" className="search-query-label">
+        Search Query
+        <input
+          id="query-input"
+          type="text"
+          className="search-query-input"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+      </label>
 
       {isLoading ? (
         <Loader />
