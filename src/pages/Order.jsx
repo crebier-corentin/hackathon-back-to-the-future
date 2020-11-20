@@ -59,6 +59,7 @@ function Order() {
           tabIndex="0"
         >
           <h4>Choose Lord service</h4>
+          <img src="/lord.svg" width="100%" alt="Lord service" />
           <p>
             By selecting our Lord service, you have the ability to send a
             picture to the artist. Based on this, our errand boy will bring the
@@ -80,6 +81,7 @@ function Order() {
           tabIndex="-1"
         >
           <h4>Choose King service</h4>
+          <img src="/king.svg" width="100%" alt="King service" />
           <p>
             By chosing our King service, a complete Uber Arts team will bring
             the artist directly to your Highness. You will have the possibility
